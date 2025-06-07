@@ -1,4 +1,4 @@
-FILE = 'D:/afacultate/An I Sem II/Limbaje Formale si Automate/Laboratoare/lfa.txt'
+FILE = 'dfa.txt'
 f = open(FILE, 'r')
 lines = f.readlines()
 
