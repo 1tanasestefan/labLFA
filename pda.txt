@@ -1,0 +1,36 @@
+# Liniile care incep cu # sunt ignorate
+[States]
+q0, q1, qf
+
+[InputAlphabet]
+a, b
+
+[StackAlphabet]
+A, $
+
+[StartingState]
+q0
+
+[StartStackSymbol]
+$
+
+[EndingStates]
+qf
+
+[Rules]
+# Format: stare_curenta, simbol_intrare, simbol_varf_stiva, stare_urmatoare, simboluri_de_adaugat_pe_stiva
+# 'e' reprezinta epsilon (lambda)
+
+# Cat timp citim 'a', punem 'A' pe stiva
+q0, a, $, q0, A$
+q0, a, A, q0, AA
+
+# Cand citim primul 'b', scoatem un 'A' de pe stiva
+q0, b, A, q1, e
+
+# Cat timp citim 'b', continuam sa scoatem 'A'
+q1, b, A, q1, e
+
+# Daca am terminat intrarea si in varful stivei e doar '$', acceptam
+q1, e, $, qf, e
+END
