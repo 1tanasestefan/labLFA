@@ -1,6 +1,6 @@
 from collections import deque
 
-FILE = 'D:/afacultate/An I Sem II/Limbaje Formale si Automate/Laboratoare/nfa.txt'
+FILE = 'nfa.txt'
 f = open(FILE, 'r')
 lines = f.readlines()
 
